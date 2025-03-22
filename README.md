@@ -47,6 +47,3 @@ Este proyecto es una API RESTful para la gestión de productos utilizando Spring
 
 ## Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar o agregar nuevas características, por favor crea un pull request o abre un issue.
-
-## Licencia
-Este proyecto está bajo la Licencia MIT.
