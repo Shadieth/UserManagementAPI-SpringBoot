@@ -31,13 +31,44 @@ Este proyecto es una API RESTful para la gestión de productos utilizando Spring
    - Crear una base de datos llamada `Productos_db`.
    - Configurar las credenciales de la base de datos en el archivo `application.properties`.
 
-3. Ejecutar la aplicación:
+## Compilar y ejecutar la aplicación
 
+1. Asegúrate de que **MySQL Server** esté corriendo.
+
+    - En **macOS/Linux**:
+    
+    ```bash
+    sudo service mysql start
+    ```
+
+    - En **Windows**, ve al "Administrador de servicios" y asegúrate de que el servicio de MySQL esté en ejecución.
+
+2. Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
+
+    ```bash
+    mvn clean install
+    ```
+
+    Este comando generará un archivo JAR en el directorio `target/`, como `ApiRESTful-0.0.1-SNAPSHOT.jar`.
+
+3. Para ejecutar la aplicación, puedes usar uno de estos dos métodos:
+
+    - Si tienes el comando `mvn spring-boot:run` disponible, ejecuta:
+    
     ```bash
     mvn spring-boot:run
     ```
 
-## Endpoints
+    - Si prefieres ejecutar el archivo JAR directamente, usa:
+    
+    ```bash
+    java -jar target/ApiRESTful-0.0.1-SNAPSHOT.jar
+    ```
+
+## Acceder a la API
+
+Por defecto, la aplicación estará disponible en `http://localhost:8080`. Puedes acceder a los siguientes endpoints:
+
 - `GET /productos`: Obtener todos los productos.
 - `GET /productos/{id}`: Obtener un producto por su ID.
 - `POST /productos`: Crear un nuevo producto.
